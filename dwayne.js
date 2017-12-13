@@ -1,8 +1,8 @@
-const dwayneDiesel = ['Dwayne','"the"', 'Rock', 'Johnson', 'Vin', 'Diesel'];
+const dwayneDiesel = ['Dwayne',"'The'", 'Rock', 'Johnson', 'Vin', 'Diesel'];
 var newDwayne = document.getElementById('new-dwayne');
 var generateDwayne = document.getElementById('generate');
 
-// fisher-yates shuffle from stack overflow
+// fisher-yates shuffle 
 function shuffle(arr) {
     var j, x, i;
     for (i = arr.length-1; i > 0; i--) {
@@ -11,14 +11,13 @@ function shuffle(arr) {
         arr[i] = arr[j];
         arr[j] = x;
     }
-    // check if "the" is the last word
-    if (arr[arr.length-1]=== '\"the\"'){
+    // check if "the" is the last word and switch it's position
+    if (arr[arr.length-1]=== "\'The\'"){
         var switchItem = arr[arr.length-1];
        arr[arr.length-1] = arr[arr.length-2];
        arr[arr.length-2] = switchItem;
+       console.log('yo!');
     }
-
-
     return arr;
 };
 
